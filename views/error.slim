@@ -1,0 +1,13 @@
+.container-fluid
+
+  main
+    .row#content
+      .col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2#error_info
+        .alert.alert-danger role="alert"
+          | Error
+          code< = status
+          | : #{message}
+
+    .row
+      .col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2#error_image
+        img.img-responsive src="/img/status_codes/status_#{status}.jpg"

@@ -1,0 +1,12 @@
+.container-fluid
+
+  main
+    .row#auth
+      .col-xs-12.col-sm-4.col-sm-offset-4
+        form method="POST" action="/auth"
+          .form-group
+            label for="access-code" Access code
+            input.form-control type="password" id="access-code" name="access_code" placeholder="Secret access code here..."
+          button.btn.btn-default type="submit" Submit
+
+include scripts

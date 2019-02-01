@@ -1,0 +1,24 @@
+.container-fluid
+
+  include header
+
+  main
+    .row#file-view
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+        a.thumbnail href=url_path
+          img src=url_path
+
+    .row#file-tools
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+        form.form-inline
+          .form-group
+            button.btn.btn-default Previous
+            button.btn.btn-default Next
+            label for="file-select" File select
+            select.form-control id="file-select"
+              option value="file_01.png" file_01.png
+              option value="file_02.png" file_02.png
+              option value="file_03.png" file_03.png
+            button.btn.btn-primary Download
+
+include scripts

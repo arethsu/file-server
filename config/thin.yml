@@ -1,0 +1,12 @@
+---
+port: 8080
+rackup: config.ru
+
+# environment: production
+environment: development
+
+# daemonize: true
+# servers: 2
+
+# debug: true
+# trace: true

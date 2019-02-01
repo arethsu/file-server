@@ -1,0 +1,15 @@
+.container-fluid
+
+  include header
+
+  main
+    .row#content
+      .col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2
+        form method="POST" action="/upload" enctype="multipart/form-data"
+          .form-group
+            label for="file-select" Select files
+            input type="file" name="file" id="file-select"
+            p.help-block File must not exceed 50 megabytes in size.
+          button.btn.btn-default type="submit" Submit files
+
+include scripts

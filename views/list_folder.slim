@@ -1,0 +1,26 @@
+.container-fluid
+
+  include header
+  include navbar
+
+  main
+    .row#file-list
+      .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+        .table-responsive
+          table.table.table-bordered.table-striped.table-hover
+            thead
+              tr
+                th
+                  | Name
+                  span.caret aria-hidden="true"
+                th
+                  | Modified
+                th.text-right
+                  | Size
+            tbody
+              - @structure[:files].each do |file|
+                tr
+                  td
+                    a href=URI.escape(@structure[:current] + file[:name]) = file[:name]
+                  td = file[:mtime]
+                  td.text-right = file[:size]
